@@ -24,9 +24,10 @@ export default class CustomAutoComplete extends React.Component {
     }
 
     onKeyChangeAutoComplete(event) {
+        console.log(",,,,,,,,,,,,,,,,");
         const keyCode = event.keyCode;
-        const { searchResult } = this.props;
-        let { currentSearchItem } = this.state;
+        const { searchResult }  = this.props;
+        let { currentSearchItem }= this.state;
         const maxIndexlength = searchResult.length;
         if (maxIndexlength > 0) {
             if (keyCode === 40 && maxIndexlength > 0 && currentSearchItem < maxIndexlength - 1) {
